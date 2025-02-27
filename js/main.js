@@ -14,7 +14,7 @@ function init() {
     // TODO 3: Call render
     render(adjectives);
     // TODO 4: Call addSortEvents
-    addSortEvents();
+    addSortEvents(adjectives);
 
 }
 
@@ -31,14 +31,17 @@ function sort() {
 }
 
 function render() {
+    console.log(adjectives);
     // TODO 3.1: add HTML to HTML string forEach adjective in adjectives
-    // TODO 3.2: add class based on score (>= 6 is 'good')
-    // TODO 3.3: HTML string toevoegen aan container
     const sjabloon = document.querySelector('.word-list');
     sjabloon.innerHTML = "";
     let HTML = "";
 
-    console.log(adjectives);
+    // TODO 3.2: add class based on score (>= 6 is 'good')
+    let classScore = "";
+
+
+
 
     adjectives.forEach(function (bv) {
         HTML += `
@@ -55,6 +58,7 @@ function render() {
     HTML += "</div>"
     sjabloon.innerHTML = HTML;
 
+    // TODO 3.3: HTML string toevoegen aan container
 }
 
 function upVote(target) {
