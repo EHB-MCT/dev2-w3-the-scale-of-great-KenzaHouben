@@ -6,13 +6,6 @@ let adjectives;
 let sortDirection = "up";
 
 function init() {
-    // fetch API
-    fetch('https://dev2-prima.onrender.com/adjectives')
-        .then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            console.log(data)
-        })
 
     // TODO 1: JSON inladen
     const adjObject = getAdjectives();
@@ -174,4 +167,4 @@ function updateScore(word, scoreChange) {
     render();
 }
 
-init();
+init()
